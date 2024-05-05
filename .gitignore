@@ -11,7 +11,7 @@ run.sh
 ssl/
 chat.yaml
 chat_*.yaml
-
+*.pem
 Log/
 Log-caloi-top/
 dist/

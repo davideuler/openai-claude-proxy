@@ -2,23 +2,16 @@ FROM python:3.10-alpine
 LABEL maintainer="kunyuan"
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
-ENV TZ=Asia/Shanghai
+ENV TZ=America/New_York
 RUN apk update && \
     apk add tzdata --no-cache && \
-    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    cp /usr/share/zoneinfo/America/New_York /etc/localtime && \
     apk del tzdata && \
     mkdir -p /usr/share/zoneinfo/Asia/ && \
-    ln -s /etc/localtime /usr/share/zoneinfo/Asia/Shanghai
+    ln -s /etc/localtime /usr/share/zoneinfo/America/New_York
 
-RUN pip install --no-cache-dir  \
-    "loguru" \
-    "sparrow-python>=0.1.3" \
-    "fastapi" \
-    "uvicorn" \
-    "orjson" \
-    "python-dotenv" \
-    "httpx" \
-    "pytz"
+ADD requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /home/openai-forward
 WORKDIR /home/openai-forward
