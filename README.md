@@ -6,7 +6,7 @@
     <br>
 </h1>
 <p align="center">
-    <b> OpenAI API 接口转发服务 <br/>
+    <b> OpenAI & Claude API 接口转发服务 <br/>
     The fastest way to deploy openai api forwarding </b>
 </p>
 
@@ -104,6 +104,7 @@
 
 3. [一键Vercel部署](deploy.md#vercel-一键部署)
    > https://vercel.openai-forward.com
+   > For Claude/OpenAI support switching, update content in file vercel.json.
 4. [cloudflare部署](deploy.md#cloudflare-部署)
    > https://cloudflare.page.openai-forward.com
 
