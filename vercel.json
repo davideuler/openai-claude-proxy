@@ -1,9 +1,9 @@
 {
     "rewrites": [
-        { "source": "/", "destination": "https://api.openai.com" },
+        { "source": "/", "destination": "https://api.anthropic.com" },
         {
             "source": "/:match*",
-            "destination": "https://api.openai.com/:match*"
+            "destination": "https://api.anthropic.com/:match*"
         }
     ],
     "github": {
